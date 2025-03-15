@@ -28,6 +28,9 @@ ul {
 
 /* components */
 
+.active {
+  color: red;
+}
 .task-title {
   font-size: 20px;
   font-style: italic;
