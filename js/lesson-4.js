@@ -174,7 +174,6 @@ function handlSubmit(evt) {
     } else {
         user.userName = input.value;
     }
-
     console.log(user);
     userName.innerHTML = input.value;
     // console.log(evt.currentTarget.elements.userName);
@@ -185,3 +184,18 @@ function handlSubmit(evt) {
  // Використовуй шаблон розмітки з файлу html та напиши наступний функціонал:
  // При кліку на кнопку "Зменшити" квадрат стає меньшим на 20 пікселів, 
  // При кліку на кнопку "Збільшити" - квадрат стає більшим на 20 пікселів.
+ 
+const box = document.querySelector('.box');
+document.querySelector('#increase').addEventListener('click', handleInc);
+document.querySelector('#decrease').addEventListener('click', handleDec);
+const BOXADDICT = 20;
+
+function handleInc() {
+    box.style.width = `${box.clientWidth + BOXADDICT}px`;
+    box.style.height = `${box.clientHeight + BOXADDICT}px`;
+};
+
+function handleDec() {
+    box.style.width = `${box.clientWidth - BOXADDICT}px`;
+    box.style.height = `${box.clientHeight - BOXADDICT}px`;
+}
